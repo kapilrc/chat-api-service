@@ -1,0 +1,24 @@
+{
+  "name": "chat-api-serive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Kapil Choudhari",
+  "dependencies": {
+    "@types/express": "^4.17.16",
+    "@types/node": "^18.11.18",
+    "@vonage/server-sdk": "2.12.0-beta.1",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
