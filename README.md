@@ -1,30 +1,41 @@
-## Available Scripts
+Before running the client app, please start this server to make api endpoint available
 
-Follow the instructions below to run this app.
+## Getting started
 
-#### `Step 1 : Install dependencies`
-
-### `npm or yarn install`
-
-Install dependencies
-
-#### `Step 2: setup env variables`
-
-### `.env`
+```bash
+git clone https://github.com/kapilrc/chat-api-service.git
+cd chat-api-service
+```
 
 Setup your variables here
 
-API_KEY = \*\*\*
+PORT=4000
 
-API_SECRET = \*\*
+API_KEY=
 
-APP_ID = \*\*\*\*
+API_SECRET= 
 
-PRIVATE_KEY= \*\* Your private key ... \*\*
+APP_ID=
 
-#### `Step 3: Run the app`
+PRIVATE_KEY_PATH=/private.key
 
-### `npm start`
+private key is included in the code
+
+Now, install dependencies
+
+```bash
+npm install
+# or
+yarn
+```
+
+run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
 
 Set your port to .env or default it listen to port 4000
 eg: http://localhost:4000
