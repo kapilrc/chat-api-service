@@ -6,7 +6,7 @@ Follow the instructions below to run this app.
 
 ### `npm or yarn install`
 
-Run this command in order to install dependencies
+Install dependencies
 
 #### `Step 2: setup env variables`
 
@@ -14,9 +14,9 @@ Run this command in order to install dependencies
 
 Setup your variables here
 
-API_KEY = 4sdf3\*\*\*
+API_KEY = \*\*\*
 
-API_SECRET = Lcg\*\*
+API_SECRET = \*\*
 
 APP_ID = \*\*\*\*
 
@@ -26,6 +26,5 @@ PRIVATE_KEY= \*\* Your private key ... \*\*
 
 ### `npm start`
 
-Runs the app in the development mode.\
 Set your port to .env or default it listen to port 4000
 eg: http://localhost:4000
