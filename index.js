@@ -50,6 +50,60 @@ app.post('/getJWT', function (req, res) {
   res.send({ jwt: jwt });
 });
 
+app.get('/getUsers', function (req, res) {
+  nexmo.users.get({ ...req.query }, (err, response) => {
+    if (err) {
+      res.status(401).send({ message: err });
+    } else {
+      res.send({ users: response?._embedded?.data?.users });
+    }
+  });
+});
+
+app.get('/getConversations', function (req, res) {
+  nexmo.conversations.get({}, (err, response) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send({ message: err });
+    } else {
+      res.send({ conversations: response?._embedded?.data?.conversations });
+    }
+  })
+});
+
+app.post('/createConversation', function (req, res) {
+  nexmo.conversations.create(
+    {
+      name: req.body.name,
+      display_name: req.body.display_name || req.body.name,
+    },
+    (err, response) => {
+      if (err) {
+        return res.status(400).send(err?.body);
+
+      } else {
+        res.send({ id: response });
+      }
+    },
+  );
+});
+
+app.post('/createUser', function (req, res) {
+  nexmo.users.create(
+    {
+      name: req.body.name,
+      display_name: req.body.display_name || req.body.name,
+    },
+    (err, response) => {
+      if (err) {
+        return res.status(400).send(err?.body);
+      } else {
+        res.send({ id: response.id });
+      }
+    },
+  );
+});
+
 // spin server
 app.listen(port, function (err) {
   if (err) console.log("Error spinning server")
